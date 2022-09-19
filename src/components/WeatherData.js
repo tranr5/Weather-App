@@ -28,7 +28,7 @@ const WeatherApp = () => {
           // setTemperature((response.data.main.temp - 273.15) * 1.8 + 32);
           setTemperature((response.data.main.temp - 273.15)*1.8 +32);
           setIcon(response.data.weather[0].icon)
-          console.log(icon)
+          // console.log(icon)
           // console.log(response.data);
           setDesc(response.data.weather[0].main);
         })

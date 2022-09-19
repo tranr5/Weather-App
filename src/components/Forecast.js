@@ -12,7 +12,9 @@ const Forecast = () => {
         const [descriptionthree, setDescthree] = useState("");
         const [city, setCity] = useState("Melbourne");
         const [country, setCountry] = useState("AU");
-    
+        const [icon, setIcon] = useState ();
+        const [icontwo, setIcontwo] = useState ();
+        const [iconthree, setIconthree] = useState ();
         
       
         const getWeatherData = (city, country) => {
@@ -28,6 +30,11 @@ const Forecast = () => {
               setDesctwo(response.data.list[2].weather[0].description)
               setTemperaturethree((response.data.list[3].main.temp - 273.15)*1.8 +32)
               setDescthree(response.data.list[3].weather[0].description)
+            //   console.log(icon)
+              setIcon(response.data.list[1].weather[0].icon)
+              setIcontwo(response.data.list[2].weather[0].icon)
+              setIconthree(response.data.list[3].weather[0].icon)
+              
             })
             .catch((error) => {
               console.log(error);
@@ -39,8 +46,23 @@ const Forecast = () => {
             <div className="whole">
               <div className="hourly-container">
                 <div className="hour one"> One hour<br/>{Math.round((temperatureone * 100) / 100)} ℉ <br/>{descriptionone}</div>
+                <img
+          alt=""
+          className="weat"
+          src={`icons/${icon}.png`}
+        />
                 <div className="hour two">Two hour<br/>{Math.round((temperaturetwo * 100) / 100)} ℉ <br/>{descriptiontwo}</div>
+                <img
+          alt=""
+          className="weat"
+          src={`icons/${icontwo}.png`}
+        />
                 <div className="hour three">Three hour<br/>{Math.round((temperaturethree * 100) / 100)} ℉ <br/>{descriptionthree}</div>
+                <img
+          alt=""
+          className="weat"
+          src={`icons/${iconthree}.png`}
+        />
               </div>
               {/* target values for search */}
               <input
@@ -48,6 +70,8 @@ const Forecast = () => {
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
               />
+
+        
               <input
                 type="text"
                 value={country}
@@ -67,3 +91,5 @@ const Forecast = () => {
       };
 
 export default Forecast;
+
+// export getWeatherData;

@@ -41,7 +41,7 @@
 
 .hourly-container{
   height: 150px;
-  width: 750px;
+  width: 950px;
   background-color: rgb(235, 235, 235);
   color: black;
   display: flex;
@@ -52,6 +52,7 @@
 
 .hour {
    padding: 50px;
+   width: 16.66%;
 }
 
 h2 {
