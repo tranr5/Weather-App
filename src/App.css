@@ -27,7 +27,10 @@
   align-items: center;
   font-size: 25px;
 }
-
+.weather-icon {
+  /* background-color: red; */
+  width: 35%;
+}
 .whole {
   display: flex;
   justify-content: center;
