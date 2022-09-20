@@ -25,13 +25,17 @@ const getWeatherData = (city, country) => {
 
 return (
     <>
-      <input type="text" value={city} onChange={(e) => setCity(e.target.value)}
+    <div className="form">
+      <input className="city"
+      type="text" value={city} onChange={(e) => setCity(e.target.value)}
       // onKeyPress={searchLocation}
         />
-      <input type="text" value={country} onChange={(e) => setCountry(e.target.value)}
+      <input className="country"
+      type="text" value={country} onChange={(e) => setCountry(e.target.value)}
         />
       {/* button */}
-      <button onClick={() => {
+      <button className="button"
+      onClick={() => {
           getWeatherData(city, country);
           console.log(data.weather[0].icon)
           
@@ -40,7 +44,7 @@ return (
         Search
       </button>
       {/* <div className="dataa">{data}</div> */}
-      
+      </div>
     </>
 )
         }

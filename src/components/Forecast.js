@@ -43,48 +43,55 @@ const Forecast = () => {
       
         return (
           <>
-            <div className="whole">
-              <div className="hourly-container">
-                <div className="hour one"> One hour<br/>{Math.round((temperatureone * 100) / 100)} ℉ <br/>{descriptionone}</div>
+            <div className="hour-whole">
+              <div className="hi">
+                <div className="hour one">
+                    <div className="hour-words"> One hour<br/>{Math.round((temperatureone * 100) / 100)} ℉ <br/>{descriptionone}</div>
                 <img
           alt=""
-          className="weat"
+          className="hour-icons"
           src={`icons/${icon}.png`}
-        />
-                <div className="hour two">Two hour<br/>{Math.round((temperaturetwo * 100) / 100)} ℉ <br/>{descriptiontwo}</div>
+        /></div>
+                <div className="hour two">
+                <div className="hour-words">Two hour<br/>{Math.round((temperaturetwo * 100) / 100)} ℉ <br/>{descriptiontwo}</div>
                 <img
           alt=""
-          className="weat"
+          className="hour-icons"
           src={`icons/${icontwo}.png`}
-        />
-                <div className="hour three">Three hour<br/>{Math.round((temperaturethree * 100) / 100)} ℉ <br/>{descriptionthree}</div>
+        /></div>
+                <div className="hour three">
+                <div className="hour-words">Three hour<br/>{Math.round((temperaturethree * 100) / 100)} ℉ <br/>{descriptionthree}</div>
                 <img
           alt=""
-          className="weat"
+          className="hour-icons"
           src={`icons/${iconthree}.png`}
-        />
+        /></div>
               </div>
+
+
               {/* target values for search */}
-              <input
+              <div className="form">
+              <input className="city"
                 type="text"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
               />
 
         
-              <input
+              <input className="country"
                 type="text"
                 value={country}
                 onChange={(e) => setCountry(e.target.value)}
               />
               {/* button */}
-              <button
+              <button className="button"
                 onClick={() => {
                   getWeatherData(city, country);
                 }}
               >
                 Search
               </button>
+              </div>
             </div>
           </>
         );

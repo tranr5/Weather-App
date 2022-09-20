@@ -45,24 +45,25 @@ const WeatherApp = () => {
           style={{ height: "5px", width: "100%", backgroundColor: "blue" }}
         ></div> */}
         
-        <div className="whole-current">
-          <div className="current-container">
+        <div>
+          <div className="middle">
             {/* time and date */}
+            <div className="current-words">
             {new Date().toLocaleString()}
             <br/>
             {city} Weather 
             <br/>
             {/* {Math.round( * 100) / 100} */}
             {Math.round((temperature * 100) / 100)} ℉ - {description}
-            <img
-          alt=""
-          className="weather-icon"
-          src={`icons/${icon}.png`}
-        />
-        
-          </div>
+            </div>
           
+          <div className="weather-icon">
+            <img alt="" className="weather-icon" src={`icons/${icon}.png`}/>
+          </div>
+          </div>
           {/* target values for search */}
+
+          <div className="form">
           <input
             type="text"
             value={city}
@@ -81,6 +82,7 @@ const WeatherApp = () => {
           >
             Search
           </button>
+          </div>
         </div>
       </>
     );
