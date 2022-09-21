@@ -2,25 +2,21 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import SearchBar from "./SearchBar";
-
+import Form from "./Search";
 
 
 // console.log(SearchBar)
 
-const WeatherApp = () => {
+const WeatherApp = (props) => {
     const [temperature, setTemperature] = useState("");
     const [description, setDesc] = useState("");
-    const [city, setCity] = useState("Melbourne");
-    const [country, setCountry] = useState("AU");
     const [icon, setIcon] = useState ();
-    
-    const pic = `http://openweathermap.org/img/wn/${icon}.png`
 
   // getting data
     const getWeatherData = (city, country) => {
       axios({
         method: "GET",
-        url: `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=180941f68139fba12f166dc35d9b688b`,
+        url: `http://api.openweathermap.org/data/2.5/weather?q=${props.city},${props.country}&APPID=180941f68139fba12f166dc35d9b688b`,
       })
         .then((response) => {
           // console.log(response.data.main.temp);
@@ -31,6 +27,7 @@ const WeatherApp = () => {
           // console.log(icon)
           // console.log(response.data);
           setDesc(response.data.weather[0].main);
+          
         })
         .catch((error) => {
           console.log(error);
@@ -45,13 +42,13 @@ const WeatherApp = () => {
           style={{ height: "5px", width: "100%", backgroundColor: "blue" }}
         ></div> */}
         
-        <div>
+        <div className="whole-current">
           <div className="middle">
             {/* time and date */}
             <div className="current-words">
             {new Date().toLocaleString()}
             <br/>
-            {city} Weather 
+            {props.city} Weather 
             <br/>
             {/* {Math.round( * 100) / 100} */}
             {Math.round((temperature * 100) / 100)} ℉ - {description}
@@ -62,27 +59,6 @@ const WeatherApp = () => {
           </div>
           </div>
           {/* target values for search */}
-
-          <div className="form">
-          <input
-            type="text"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          />
-          <input
-            type="text"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-          />
-          {/* button */}
-          <button
-            onClick={() => {
-              getWeatherData(city, country);
-            }}
-          >
-            Search
-          </button>
-          </div>
         </div>
       </>
     );

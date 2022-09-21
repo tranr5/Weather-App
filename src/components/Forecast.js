@@ -46,7 +46,7 @@ const Forecast = () => {
             <div className="hour-whole">
               <div className="hi">
                 <div className="hour one">
-                    <div className="hour-words"> One hour<br/>{Math.round((temperatureone * 100) / 100)} ℉ <br/>{descriptionone}</div>
+                    <div className="hour-words">One hour<br/>{Math.round((temperatureone * 100) / 100)} ℉ <br/>{descriptionone}</div>
                 <img
           alt=""
           className="hour-icons"

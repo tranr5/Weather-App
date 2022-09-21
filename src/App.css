@@ -1,11 +1,23 @@
 .App {
+  /* filter: brightness(50%); */
+  background-image:
+  /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
+  url("https://i.imgur.com/hnsb4Ax.jpg");
+  /* opacity: .70; */
+-webkit-transition: background 1.5s linear;
+-moz-transition: background 1.5s linear;
+-o-transition: background 1.5s linear;
+-ms-transition: background 1.5s linear;
+transition: background 1.5s linear;
   text-align: center;
   /* display: flex; */
   justify-content: center;
   align-items: center;
-  height: 1000px; 
+  height: 1500px; 
   width: 100%; 
   background-color: #226ba3;
+  background-repeat: no-repeat;
+  background-size: 2600px;
   font-size: 30px;
   color: #fff; 
 }
@@ -16,26 +28,29 @@
   margin: 0;
   padding: 20px;
   height: 30px;
-  justify-content: end;
+  justify-content: space-between;
   padding-right: 50px;
   padding-top: 30px;
   padding-top: 30px;
   text-shadow: 3px 3px 4px rgba(25,25,73, 0.55);
+  background-color: #ccc;
+  background: linear-gradient(rgba(215, 196, 196, 0.5), rgba(0, 0, 0, 0.5));
+  
   
 }
 
 h3 {
   margin: 0;
-  padding-left: 500px;
+  padding-left: 60px;
   display: flex;
   justify-content: center;
 }
-/* .whole-current {
+.whole-current {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-} */
+}
 
 .current-container {
   display: flex;
@@ -45,9 +60,9 @@ h3 {
   margin-top: 1%;
   width: 40%; 
   text-align: left;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(235, 235, 235,.7);
   color: black;
-  margin-left: 475px;
+  margin-left: 30%;
   font-size: 25px; 
   overflow: hidden;
   box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.5);
@@ -55,26 +70,30 @@ h3 {
 }
 .title {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   background-color: #fff;
+  height: 30px;
   
 }
 p {
   padding-top: 5px;
-  width: 70%;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 300px;
   font-size: 16px;
   margin: 0;
 }
 .middle {
   display: flex;
   width: 500px;
-  
+  min-width: 200px;
   
 }
 .current-words {
   padding: 20px;
   width: 500px;
-  height: 160px;
+  height: 100px;
 }
 .weather-icon {
   /* background-color: red; */
@@ -93,9 +112,9 @@ p {
   align-items: center;
   margin-top: 1%;
   width: 40%; 
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(235, 235, 235,.7);
   color: black;
-  margin-left: 475px;
+  margin-left: 30%;
   border-radius: 5px;
   font-size: 25px; 
   box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.5);
@@ -127,8 +146,7 @@ p {
  .hour-icons {
   display: flex;
   justify-content: center;
-  
-  /* background-color: rgb(142, 170, 198); */
+
   border-radius: 50%;
   margin-left: 60px;
   /* background-color: #226ba3; */

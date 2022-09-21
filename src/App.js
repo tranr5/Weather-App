@@ -1,21 +1,26 @@
 import './App.css';
-import WeatherApp from './components/WeatherData';
+import WeatherApp from './components/WeatherApp';
 import SearchBar from './components/SearchBar';
 import Forecast from './components/Forecast';
-
+import Form from './components/Search';
+import {useState} from 'react'
 
 function App() {
+  const [city, setCity] = useState("Melborne");
+  const [country, setCountry] = useState("AU");
+
+
   return (
     <div className="App">
       <div className="nav">
-        <SearchBar/>
+        <SearchBar city={city} country={country} setCity={setCity} setCountry={setCountry}/>
+        <Form />
         <h3>Weather App</h3>
-   
-   </div>
+    </div>
    
    <div className='current-container'>
     <div className='title'><h4>Current Weather</h4><p>{new Date().toLocaleString()}</p></div>
-    <WeatherApp/>
+    <WeatherApp city={city} country={country}/>
     </div>
     
     <div className='hourly-container'>
@@ -28,3 +33,4 @@ function App() {
 }
 
 export default App;
+
