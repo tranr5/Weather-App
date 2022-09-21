@@ -1,17 +1,16 @@
 import React from "react";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import axios from "axios";
 
 
-const Forecast = () => {
+const Forecast = ({city, country}) => {
         const [temperatureone, setTemperatureone] = useState("");
         const [temperaturetwo, setTemperaturetwo] = useState("");
         const [temperaturethree, setTemperaturethree] = useState("");
         const [descriptionone, setDescone] = useState("");
         const [descriptiontwo, setDesctwo] = useState("");
         const [descriptionthree, setDescthree] = useState("");
-        const [city, setCity] = useState("Melbourne");
-        const [country, setCountry] = useState("AU");
+        
         const [icon, setIcon] = useState ();
         const [icontwo, setIcontwo] = useState ();
         const [iconthree, setIconthree] = useState ();
@@ -30,7 +29,6 @@ const Forecast = () => {
               setDesctwo(response.data.list[2].weather[0].description)
               setTemperaturethree((response.data.list[3].main.temp - 273.15)*1.8 +32)
               setDescthree(response.data.list[3].weather[0].description)
-            //   console.log(icon)
               setIcon(response.data.list[1].weather[0].icon)
               setIcontwo(response.data.list[2].weather[0].icon)
               setIconthree(response.data.list[3].weather[0].icon)
@@ -41,6 +39,13 @@ const Forecast = () => {
             });
         };
       
+        useEffect(() => {
+          getWeatherData(city,country)
+          
+        }, [city,country]);
+    
+
+        
         return (
           <>
             <div className="hour-whole">
@@ -69,29 +74,7 @@ const Forecast = () => {
               </div>
 
 
-              {/* target values for search */}
-              <div className="form">
-              <input className="city"
-                type="text"
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-              />
-
-        
-              <input className="country"
-                type="text"
-                value={country}
-                onChange={(e) => setCountry(e.target.value)}
-              />
-              {/* button */}
-              <button className="button"
-                onClick={() => {
-                  getWeatherData(city, country);
-                }}
-              >
-                Search
-              </button>
-              </div>
+          
             </div>
           </>
         );

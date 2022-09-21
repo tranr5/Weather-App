@@ -1,31 +1,28 @@
 import React from "react";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import axios from "axios";
-import SearchBar from "./SearchBar";
-import Form from "./Search";
+
+
 
 
 // console.log(SearchBar)
 
-const WeatherApp = (props) => {
+const WeatherApp = ({city,country}) => {
     const [temperature, setTemperature] = useState("");
     const [description, setDesc] = useState("");
     const [icon, setIcon] = useState ();
-
+    
   // getting data
     const getWeatherData = (city, country) => {
       axios({
         method: "GET",
-        url: `http://api.openweathermap.org/data/2.5/weather?q=${props.city},${props.country}&APPID=180941f68139fba12f166dc35d9b688b`,
+        url: `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=180941f68139fba12f166dc35d9b688b`,
       })
         .then((response) => {
-          // console.log(response.data.main.temp);
           // Kelvin to Fahrenheit
           // setTemperature((response.data.main.temp - 273.15) * 1.8 + 32);
           setTemperature((response.data.main.temp - 273.15)*1.8 +32);
           setIcon(response.data.weather[0].icon)
-          // console.log(icon)
-          // console.log(response.data);
           setDesc(response.data.weather[0].main);
           
         })
@@ -34,7 +31,13 @@ const WeatherApp = (props) => {
         });
     };
 
-  
+    useEffect(() => {
+      getWeatherData(city,country)
+      
+
+    }, [city,country]);
+
+
     return (
       
       <>
@@ -48,7 +51,7 @@ const WeatherApp = (props) => {
             <div className="current-words">
             {new Date().toLocaleString()}
             <br/>
-            {props.city} Weather 
+            {city} Weather 
             <br/>
             {/* {Math.round( * 100) / 100} */}
             {Math.round((temperature * 100) / 100)} ℉ - {description}
