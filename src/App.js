@@ -6,7 +6,7 @@ import {useState} from 'react'
 
 function App() {
   const [city, setCity] = useState("");
-  const [country, setCountry] = useState(""); 
+  const [country, setCountry] = useState("");  
 
 
   return (
@@ -19,7 +19,7 @@ function App() {
    
    <div className='current-container'>
     <div className='title'><h4>Current Weather</h4><p>{new Date().toLocaleString()}</p></div>
-    <WeatherApp city={city} country={country} />
+    <WeatherApp city={city} country={country}/>
     </div>
     
     <div className='hourly-container'>

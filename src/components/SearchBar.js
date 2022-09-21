@@ -11,9 +11,13 @@ const SearchBar = ({city,setCity,country,setCountry}) => {
     setCountry(country)
   }
 
+  const handleChange = event => {
+    setCity(event.target.value);
+  }
+
   const searchEnter = (e) => {
     if (e.key === 'Enter') {
-      
+      console.log('do validate')
     }
   }
 
@@ -38,8 +42,8 @@ return (
       onKeyPress={searchEnter}
         />
       {/* button */}
-      <button className="button" type="submit"
-        onClick={ () => handleSubmit(city,country)}>Search</button>
+      {/* <button className="button" type="submit"
+        onClick={ () => handleSubmit(city,country)}>Search</button> */}
       </div>
     </>
 )

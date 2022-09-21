@@ -47,9 +47,11 @@ h3 {
 }
 .whole-current {
   display: flex;
+  height: 120px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 }
 
 .current-container {
@@ -76,6 +78,9 @@ h3 {
   height: 30px;
   
 }
+.current-temp {
+  font-size: 4rem;
+}
 p {
   padding-top: 5px;
   padding-left: 10px;
@@ -88,10 +93,12 @@ p {
   display: flex;
   width: 500px;
   min-width: 200px;
+  min-height: 160px;
+  
   
 }
 .current-words {
-  padding: 20px;
+  padding: 30px 20px;
   width: 500px;
   height: 100px;
 }
@@ -99,10 +106,13 @@ p {
   /* background-color: red; */
   display: flex;
   justify-content: center;
+  padding-top: 10px;
   padding-right: 10px;
   /* background-color: rgb(142, 170, 198); */
   /* border-radius: 50%; */
   margin-left: 20px;
+  width: 120px;
+  height: 120px;
 
 }
 .hourly-container{
@@ -154,6 +164,7 @@ p {
 
 h4 {
   padding-left: 5px;
+  text-align: left;
   margin: 0;
   background-color: #fff;
   width: 100%;

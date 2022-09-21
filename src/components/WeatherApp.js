@@ -49,16 +49,17 @@ const WeatherApp = ({city,country}) => {
           <div className="middle">
             {/* time and date */}
             <div className="current-words">
-            {new Date().toLocaleString()}
-            <br/>
-            {city} Weather 
+          
+     
+            {city} 
             <br/>
             {/* {Math.round( * 100) / 100} */}
-            {Math.round((temperature * 100) / 100)} ℉ - {description}
+            <span className="current-temp">{Math.round((temperature * 100) / 100)} ℉</span>
+             - {description}
             </div>
           
           <div className="weather-icon">
-            <img alt="" className="weather-icon" src={`icons/${icon}.png`}/>
+            <img alt="" className="weathericon" src={`icons/${icon}.png`}/>
           </div>
           </div>
           {/* target values for search */}
