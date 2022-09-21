@@ -5,8 +5,8 @@ import Forecast from './components/Forecast';
 import {useState} from 'react'
 
 function App() {
-  const [city, setCity] = useState("");  //has LONDON, does everything
-  const [country, setCountry] = useState(""); //same for this one
+  const [city, setCity] = useState("");
+  const [country, setCountry] = useState(""); 
 
 
   return (

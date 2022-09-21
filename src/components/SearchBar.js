@@ -13,7 +13,7 @@ const SearchBar = ({city,setCity,country,setCountry}) => {
 
   const searchEnter = (e) => {
     if (e.key === 'Enter') {
-      console.log('do validate')
+      
     }
   }
 
