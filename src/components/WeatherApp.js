@@ -11,7 +11,12 @@ const WeatherApp = ({city,country}) => {
     const [temperature, setTemperature] = useState("");
     const [description, setDesc] = useState("");
     const [icon, setIcon] = useState ();
-    
+    const [min, setMin] = useState ("");
+    const [max, setMax] = useState ("");
+    const [feels, setFeels] = useState ("");
+    const [time,setTime] = useState();
+
+
   // getting data
     const getWeatherData = (city, country) => {
       axios({
@@ -24,7 +29,10 @@ const WeatherApp = ({city,country}) => {
           setTemperature((response.data.main.temp - 273.15)*1.8 +32);
           setIcon(response.data.weather[0].icon)
           setDesc(response.data.weather[0].main);
-          
+          setMin((response.data.main.temp_min - 273.15)*1.8 +32)
+          setMax((response.data.main.temp_max - 273.15)*1.8 +32);
+          setFeels((response.data.main.feels_like - 273.15)*1.8 +32);
+
         })
         .catch((error) => {
           console.log(error);
@@ -55,11 +63,18 @@ const WeatherApp = ({city,country}) => {
             <br/>
             {/* {Math.round( * 100) / 100} */}
             <span className="current-temp">{Math.round((temperature * 100) / 100)} ℉</span>
-             - {description}
+              
+             <div className="minmaxfeels">
+             <div className="feels">Feels like {Math.round((feels * 100) / 100)}&#176;</div>
+             <div className="maxmin">Hi {Math.round((min * 100) / 100)}&#176;<div className="min"> Lo {Math.round((max * 100) / 100)}&#176;</div></div> 
+            
+             </div>
+             
             </div>
           
           <div className="weather-icon">
             <img alt="" className="weathericon" src={`icons/${icon}.png`}/>
+            <span className="desc">{description}</span>
           </div>
           </div>
           {/* target values for search */}

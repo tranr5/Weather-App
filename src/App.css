@@ -1,25 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .App {
-  /* filter: brightness(50%); */
+
   background-image:
-  /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */
   url("https://i.imgur.com/hnsb4Ax.jpg");
-  /* opacity: .70; */
 -webkit-transition: background 1.5s linear;
 -moz-transition: background 1.5s linear;
 -o-transition: background 1.5s linear;
 -ms-transition: background 1.5s linear;
 transition: background 1.5s linear;
   text-align: center;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
-  height: 1500px; 
+  height: 1400px; 
   width: 100%; 
   background-color: #226ba3;
   background-repeat: no-repeat;
   background-size: 2600px;
   font-size: 30px;
   color: #fff; 
+  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 .nav {
@@ -29,14 +31,10 @@ transition: background 1.5s linear;
   padding: 20px;
   height: 30px;
   justify-content: space-between;
-  padding-right: 50px;
-  padding-top: 30px;
-  padding-top: 30px;
+  padding: 10px 50px 30px 20px;
   text-shadow: 3px 3px 4px rgba(25,25,73, 0.55);
   background-color: #ccc;
-  background: linear-gradient(rgba(215, 196, 196, 0.5), rgba(0, 0, 0, 0.5));
-  
-  
+  background: linear-gradient(rgba(85, 84, 114, 0.7), rgba(0, 0, 0, 0.05));
 }
 
 h3 {
@@ -47,19 +45,17 @@ h3 {
 }
 .whole-current {
   display: flex;
-  height: 120px;
+  height: 115px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
 }
 
 .current-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-top: 1%;
+  margin-top: 2%;
   width: 40%; 
   text-align: left;
   background-color: rgb(235, 235, 235,.7);
@@ -69,6 +65,7 @@ h3 {
   overflow: hidden;
   box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.5);
   border-radius: 5px;
+  height: 200px;
 }
 .title {
   display: flex;
@@ -98,23 +95,43 @@ p {
   
 }
 .current-words {
-  padding: 30px 20px;
-  width: 500px;
+  padding: 30px 20px 0 20px;
+  width: 300px;
   height: 100px;
+}
+.minmaxfeels {
+  font-size: 16px;
+  color: rgb(84, 84, 84);
+}
+.maxmin {
+  display: flex;
+
+}
+.min {
+  padding-left: 10px;
 }
 .weather-icon {
   /* background-color: red; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-top: 10px;
   padding-right: 10px;
   /* background-color: rgb(142, 170, 198); */
   /* border-radius: 50%; */
   margin-left: 20px;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
 
 }
+.weathericon {
+  padding: 30px 0px 0px 0px;
+}
+.desc {
+  color: rgb(84, 84, 84);
+}
+
 .hourly-container{
   display: flex;
   flex-direction: column;
@@ -135,24 +152,37 @@ p {
   display: flex;
   flex-direction: row;
   justify-self: start;
+  box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.3);
    /* padding-right: 100px;
    width: 100%;
    height: 100px;
    margin: auto; */
+   width: 500px;
 } 
 .hour-words {
   display: flex;
+  flex-direction: column;
   /* background-color: #226ba3; */
   text-align: left;
   width: 250px;
-  height: 100px;
-  padding: 20px;
+  padding: 10px 20px 0 20px;
   
 }
-.hi {
-  width: 500px;
+.hour-detail {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  height: 128px;
 }
-
+.hour-temp {
+  font-size: 2.5rem;
+  padding-left: 20px;
+}
+.hour-desc {
+  padding-left: 20px;
+  font-size: 18px;
+  color: rgb(84, 84, 84);
+}
  .hour-icons {
   display: flex;
   justify-content: center;
@@ -163,7 +193,7 @@ p {
 } 
 
 h4 {
-  padding-left: 5px;
+  padding-left: 10px;
   text-align: left;
   margin: 0;
   background-color: #fff;
@@ -172,6 +202,7 @@ h4 {
 
 .form {
   padding-bottom: 20px;
+  
 }
 
 .city,.country {
@@ -179,10 +210,10 @@ h4 {
   font-size: 15px;
   height: 20px;
   border: 1px solid #ccc;
-  padding:5px 5px 5px 3px;
+  padding:5px 5px 5px 10px;
   margin: 0 5px 0 0;
-  border-radius: 5px;
-
+  border-radius: 25px;
+  background: rgba(238, 238, 238, 0.892);
 }
 
 .button {
@@ -191,7 +222,7 @@ h4 {
   padding:7px 10px 23px 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  background: rgb(114, 114, 124);
+  background: rgb(114, 114, 124,.1);
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
 }

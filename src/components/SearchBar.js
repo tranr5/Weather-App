@@ -28,14 +28,14 @@ return (
       <input className="city"
       type="text" 
       value={city} 
-      placeholder="Melbourne" 
+      placeholder="City" 
       onChange={(e) => setCity(e.target.value)}
       onKeyDown={searchEnter}
         />
       <input className="country"
       type="text" 
       value={country} 
-      placeholder="AU" 
+      placeholder="Country" 
       onChange={(e) => setCountry(e.target.value)}
       onKeyPress={searchEnter}
         />

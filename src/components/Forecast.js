@@ -14,7 +14,7 @@ const Forecast = ({city, country}) => {
         const [icon, setIcon] = useState ();
         const [icontwo, setIcontwo] = useState ();
         const [iconthree, setIconthree] = useState ();
-        
+
       
         const getWeatherData = (city, country) => {
           axios({
@@ -32,7 +32,7 @@ const Forecast = ({city, country}) => {
               setIcon(response.data.list[1].weather[0].icon)
               setIcontwo(response.data.list[2].weather[0].icon)
               setIconthree(response.data.list[3].weather[0].icon)
-              
+
             })
             .catch((error) => {
               console.log(error);
@@ -49,29 +49,37 @@ const Forecast = ({city, country}) => {
         return (
           <>
             <div className="hour-whole">
-              <div className="hi">
                 <div className="hour one">
-                    <div className="hour-words">One hour<br/>{Math.round((temperatureone * 100) / 100)} ℉ <br/>{descriptionone}</div>
+                  <div className="hour-detail">
+                    <div className="hour-words">One hour</div>
+                    <div className="hour-temp">{Math.round((temperatureone * 100) / 100)} ℉ </div>
+                    <div className="hour-desc">{descriptionone}</div></div>
                 <img
           alt=""
           className="hour-icons"
           src={`icons/${icon}.png`}
         /></div>
                 <div className="hour two">
-                <div className="hour-words">Two hour<br/>{Math.round((temperaturetwo * 100) / 100)} ℉ <br/>{descriptiontwo}</div>
+                <div className="hour-detail">
+                    <div className="hour-words">Two Hours</div>
+                    <div className="hour-temp">{Math.round((temperaturetwo * 100) / 100)} ℉ </div>
+                    <div className="hour-desc">{descriptiontwo}</div></div>
                 <img
           alt=""
           className="hour-icons"
           src={`icons/${icontwo}.png`}
         /></div>
                 <div className="hour three">
-                <div className="hour-words">Three hour<br/>{Math.round((temperaturethree * 100) / 100)} ℉ <br/>{descriptionthree}</div>
+                <div className="hour-detail">
+                    <div className="hour-words">Three Hours</div>
+                    <div className="hour-temp">{Math.round((temperaturethree * 100) / 100)} ℉ </div>
+                    <div className="hour-desc">{descriptionthree}</div></div>
                 <img
           alt=""
           className="hour-icons"
           src={`icons/${iconthree}.png`}
         /></div>
-              </div>
+              
 
 
           
@@ -83,3 +91,5 @@ const Forecast = ({city, country}) => {
 export default Forecast;
 
 // export getWeatherData;
+
+
