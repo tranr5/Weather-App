@@ -11,7 +11,7 @@ const SearchBar = ({city,setCity,country,setCountry}) => {
   //   setCountry(country)
   // }
 
- 
+
 
   const searchEnter = (e) => {
     if (e.key === 'Enter') {
@@ -39,9 +39,6 @@ return (
       onChange={(e) => setCountry(e.target.value)}
       onKeyPress={searchEnter}
         />
-      {/* button */}
-      {/* <button className="button" type="submit"
-        onClick={ () => handleSubmit(city,country)}>Search</button> */}
       </div>
     </>
 )
