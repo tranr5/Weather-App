@@ -7,7 +7,13 @@
 This project is a weather app using React and OpenWeatherMapp API.  I wanted to see how I could implement API and figure out how to use the data given. 
 <br>
 <br>
+<br>
+<br>
 ![image](https://i.imgur.com/RyOMOPk.png)
+
+### Tech Stack
+
+React, Html, CSS, Postman
 
 ### Wireframes
 
