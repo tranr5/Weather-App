@@ -6,14 +6,12 @@ import React from "react";
 const SearchBar = ({city,setCity,country,setCountry}) => {
 
 
-  function handleSubmit (city,country) {
-    setCity(city)
-    setCountry(country)
-  }
+  // function handleSubmit (city,country) {
+  //   setCity(city)
+  //   setCountry(country)
+  // }
 
-  const handleChange = event => {
-    setCity(event.target.value);
-  }
+ 
 
   const searchEnter = (e) => {
     if (e.key === 'Enter') {
