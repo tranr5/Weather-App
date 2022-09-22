@@ -1,6 +1,6 @@
 # Weather React App
 
-[Link](https://weatherapprt.herokuapp.com/)
+[<b>Link</b>](https://weatherapprt.herokuapp.com/)
 ## Description:
 
 A weather app that allows user to type the location of their choosing to display the current weather in that area and the hourly weather as well.
