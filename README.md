@@ -30,3 +30,7 @@ https://openweathermap.org/api
 ### COmponent Heirarchy
 
 ![image](https://user-images.githubusercontent.com/109304616/190704662-0992aa46-2f83-4fa8-8f52-4093dea4a716.png)
+
+### Credits
+
+[OpenWeatherMap](https://openweathermap.org/)
