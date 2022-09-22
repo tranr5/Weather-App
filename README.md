@@ -1,6 +1,7 @@
 # Weather React App
 
-[(#### Link)](https://weatherapprt.herokuapp.com/)
+[<b>Link</b>](https://weatherapprt.herokuapp.com/)
+
 ## Description:
 
 A weather app that allows user to type the location of their choosing to display the current weather in that area and the hourly weather as well.
@@ -9,8 +10,12 @@ A weather app that allows user to type the location of their choosing to display
 
 ![image](https://user-images.githubusercontent.com/109304616/190714522-73db4968-7c7d-4627-9300-e1caa6e3f0b8.png)
 
-### MVP User Stories
+### Getting Started
 
+First you need an API key from OpenWeatherMap, you can get one by creating an account on their website. After you got your API key, create a .env file at root directory of project, copy the line below to the file and replace YOUR_KEY with your OpenWeatherMap API Key.
+```
+git clone https://github.com/tranr5/Weather-App.git
+```
 
 ### API
 
