@@ -4,7 +4,8 @@
 
 ## Description:
 
-A weather app that allows user to type the location of their choosing to display the current weather in that area and the hourly weather as well.
+This project is a weather app using React and OpenWeatherMapp API.  I wanted to see how I could implement API and figure out how to use the data given.  
+![image](https://i.imgur.com/RyOMOPk.png)
 
 ### Wireframes
 
@@ -21,11 +22,6 @@ cd weather-app
 npm install
 npm start
 ```
-
-### API
-
-https://openweathermap.org/api
-
 
 ### COmponent Heirarchy
 
