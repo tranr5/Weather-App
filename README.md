@@ -16,6 +16,11 @@ First you need an API key from OpenWeatherMap, you can get one by creating an ac
 ```
 git clone https://github.com/tranr5/Weather-App.git
 ```
+```
+cd weather-app
+npm install
+npm start
+```
 
 ### API
 
