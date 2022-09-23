@@ -43,7 +43,8 @@ npm start
 
 [OpenWeatherMap](https://openweathermap.org/)
 
-improvements:
-change time based on timezone of location
-add search button
-add daily page
+<b>improvements:</b><br>
+change time based on timezone of location<br>
+add search button<br>
+add daily page<br>
+add a toggle feature for Celsius and Farenheit
