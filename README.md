@@ -4,7 +4,7 @@
 
 ## Description:
 
-This project is a weather app using React and OpenWeatherMapp API. It is intended use is to pull weather data and give the user information on the current and hourly weather when location is inputted. I wanted to see how I could implement the APIs and figure out how to use the data given. 
+This project is a weather app using React and OpenWeatherMapp API. Its intended use is to pull weather data and give the user information on the current and hourly weather when location is inputted. I wanted to see how I could implement the APIs and figure out how to use the data given. 
 <br>
 <br>
 <br>
