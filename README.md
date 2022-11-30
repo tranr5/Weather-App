@@ -9,7 +9,7 @@ This project is a weather app using React and OpenWeatherMapp API. Its intended 
 <br>
 <br>
 <br>
-![image](https://i.imgur.com/0TA1B1e.png)
+![image](https://i.imgur.com/RyOMOPk.png) 
 
 ## Tech Stack
 
